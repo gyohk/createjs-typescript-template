@@ -1,0 +1,30 @@
+{
+  "name": "createjs-typescript-template",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gyohk/createjs-typescript-template",
+  "authors": [
+    "gyoh_k"
+  ],
+  "main": "Gruntfile.js",
+  "license": "MIT",
+  "dependencies": {
+    "EaselJS": "*",
+    "PreloadJS": "*",
+    "SoundJS": "*",
+    "TweenJS": "*",
+    "jquery1": "jquery#1",
+    "jquery2": "jquery#~2.1.1"
+  },
+  "exportsOverride": {
+    "*": {
+      "js": "**/*.js",
+      "css": "**/*.css",
+      "images": [
+        "**/*.jpg",
+        "**/*.png",
+        "**/*.gif"
+      ],
+      "swf": "**/*.swf"
+    }
+  }
+}
