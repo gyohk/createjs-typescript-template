@@ -25,6 +25,9 @@
     },
     "preloadjs/preloadjs.d.ts": {
       "commit": "16fc1fb8b440e55e88bd1bbb393dcf2e9fb07d22"
+    },
+    "stats/stats.d.ts": {
+      "commit": "16fc1fb8b440e55e88bd1bbb393dcf2e9fb07d22"
     }
   }
 }

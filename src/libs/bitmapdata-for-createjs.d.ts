@@ -27,6 +27,8 @@ declare module createjs {
 
         constructor(image?:HTMLVideoElement, width?:number, height?:number, fillColor?:number);
 
+        constructor(image?:any, width?:number, height?:number, fillColor?:number);
+
         // properties
         canvas:HTMLCanvasElement;
         context:CanvasRenderingContext2D;
