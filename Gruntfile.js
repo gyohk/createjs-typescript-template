@@ -1,25 +1,20 @@
 module.exports = function (grunt) {
     grunt.initConfig({
-        // package.json の内容を読み込み。他の箇所から参照できるようにする。
         pkg: grunt.file.readJSON('package.json'),
         
-        // 設定値の定義。名前が opt であることに特別な理由はない。
         opt: {
             "tsDir": "src",
             "outDir": "dest"
         },
-        // grunt-ts に対する設定
         ts: {
             options: {
-                target: 'es5', // --target に指定するパラメータ
-                module: 'commonjs', // --module に指定するパラメータ
-                noImplicitAny: true // --noImplicitAny を使うか使わないか
+                target: 'es5',
+                module: 'commonjs',
+                noImplicitAny: true
             },
-            // main の動作を定義。名前は main 以外のものでも問題ない。
-            // test という名前でテストコードのコンパイル処理を追加することが多い。
             main: {
                 src: ['<%= opt.tsDir %>/*.ts'],
-                outDir: '<%= opt.outDir %>/js'
+                out: '<%= opt.outDir %>/js/Main.js'
             }
         },
         tsd: {
@@ -57,7 +52,7 @@ module.exports = function (grunt) {
                     name: 'my-project',
                     target: 'es5'
                 },
-                src: ['./src/**/*']
+                src: ['./<%= opt.tsDir %>/**/*']
             }
         },
         copy: {
@@ -79,7 +74,7 @@ module.exports = function (grunt) {
                 options: {
                     port: 9001,
                     hostname: 'localhost',
-                    base: 'dest',
+                    base: '<%= opt.outDir %>',
                     open: {
                         target: 'http://localhost:9001',
                         appName: 'Chrome' // open, Firefox, Chrome
@@ -92,7 +87,7 @@ module.exports = function (grunt) {
         bower: {
             install: {
                 options: {
-                    targetDir: './dest/libs',
+                    targetDir: './<%= opt.outDir %>/libs',
                     layout: 'byComponent',
                     install: true,
                     verbose: false,
@@ -100,11 +95,61 @@ module.exports = function (grunt) {
                     cleanBowerDir: false
                 }
             }
-        }
+        },
+        uglify: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: './<%= opt.outDir %>',
+                    src: './js/**/**.js',
+                    dest: './js/'
+                }]
+            }
+        },
+        cssmin: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: './<%= opt.outDir %>',
+                    src: './css/**/**.css',
+                    dest: './css/'
+                }]
+            }
+        },
+        imagemin: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: './<%= opt.outDir %>', 
+                    src: ['./images/*.{png,jpg,gif,svg}'],
+                    dest: './images/'
+                }]
+            }
+        },
+        
     });
     
     grunt.registerTask('setup', ['clean', 'tsd', 'copy', 'bower']);
     grunt.registerTask('default', ['ts', 'tslint']);
+    grunt.registerTask('min', ['uglify', 'cssmin', 'imagemin']);
+    
+    /*
+    // This feature has not yet been reflected in the NPM.
+    // https://github.com/elsassph/createjs-def/pull/8/files?short_path=04c6e90
+    
+    grunt.registerTask('cjsdef', 'create d.ts file(s) from an output of the Toolkit for CreateJS', function() {
+        var config = grunt.config();
+        
+        module.paths.push('./node_modules');
+        var fs = require("fs");
+        var createjs = require('createjs-def');
+        
+        var animation_data = fs.readFileSync(config.opt.outDir + 'assets/shape.js');
+        var data = createjs.createDef(animation_data, 'typescript');
+        fs.writeFile(config.opt.srcDir + 'shape.d.ts', data);
+        
+    });
+    */
     
     // 
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -115,4 +160,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-tslint');
     grunt.loadNpmTasks('grunt-typedoc');
     grunt.loadNpmTasks('grunt-bower-task');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 };
