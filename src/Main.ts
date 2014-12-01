@@ -1,5 +1,5 @@
 ///<reference path="../typings/tsd.d.ts" />
-
+///<reference path="libs/bitmapdata-for-createjs.d.ts" />
 module app {
     "use strict";
 
@@ -9,6 +9,10 @@ module app {
 
         constructor(canvas_id: string) {
             this.stage = new createjs.Stage(canvas_id);
+            this.init();
+        }
+
+        init():void{
             this.circle = new createjs.Shape();
             this.circle.graphics.beginFill("red").drawCircle(0, 0, 50);
             this.circle.x = 100;
@@ -16,6 +20,7 @@ module app {
             this.stage.addChild(this.circle);
             // stage.addChild(new createjs.Shape()).setTransform(100,100).graphics.f("red").dc(0,0,50);
             this.stage.update();
+            
         }
 
     }
