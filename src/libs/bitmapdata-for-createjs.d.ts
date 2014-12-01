@@ -166,9 +166,9 @@ declare module createjs {
 
         perlinNoise(baseX:number, baseY:number, numOctaves:number, randomSeed:number, stitch?:boolean, fractalNoise?:boolean, channelOptions?:number, grayScale?:boolean, offsets?:Point[], interpolateType?:string):void;
 
-        pixelDissolve(source:BitmapData, sourceRect:Rectangle, destPoint:Point, buffer?:number[], numPixels?:number, fillColor?:number):any; // number[] or number
+        pixelDissolve(source:BitmapData,    sourceRect:Rectangle, destPoint:Point, buffer?:number[], numPixels?:number, fillColor?:number):any; // number[] or number
         pixelDissolve(source:DisplayObject, sourceRect:Rectangle, destPoint:Point, buffer?:number[], numPixels?:number, fillColor?:number):any; // number[] or number
-        pixelDissolve(source:Stage, sourceRect:Rectangle, destPoint:Point, buffer?:number[], numPixels?:number, fillColor?:number):any; // number[] or number
+        pixelDissolve(source:Stage,            sourceRect:Rectangle, destPoint:Point, buffer?:number[], numPixels?:number, fillColor?:number):any; // number[] or number
         pixelDissolve(source:HTMLImageElement, sourceRect:Rectangle, destPoint:Point, buffer?:number[], numPixels?:number, fillColor?:number):any; // number[] or number
         pixelDissolve(source:HTMLCanvasElement, sourceRect:Rectangle, destPoint:Point, buffer?:number[], numPixels?:number, fillColor?:number):any; // number[] or number
         pixelDissolve(source:HTMLVideoElement, sourceRect:Rectangle, destPoint:Point, buffer?:number[], numPixels?:number, fillColor?:number):any; // number[] or number
