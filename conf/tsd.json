@@ -6,31 +6,34 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "jquery/jquery.d.ts": {
-      "commit": "fa7415af31cfa888ed621c0218ce728823158836"
+      "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
     },
     "createjs/createjs.d.ts": {
-      "commit": "fa7415af31cfa888ed621c0218ce728823158836"
+      "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
     },
     "soundjs/soundjs.d.ts": {
-      "commit": "fa7415af31cfa888ed621c0218ce728823158836"
+      "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
     },
     "createjs-lib/createjs-lib.d.ts": {
-      "commit": "fa7415af31cfa888ed621c0218ce728823158836"
+      "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
     },
     "tweenjs/tweenjs.d.ts": {
-      "commit": "fa7415af31cfa888ed621c0218ce728823158836"
+      "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
     },
     "easeljs/easeljs.d.ts": {
-      "commit": "fa7415af31cfa888ed621c0218ce728823158836"
+      "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
     },
     "preloadjs/preloadjs.d.ts": {
-      "commit": "fa7415af31cfa888ed621c0218ce728823158836"
+      "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
     },
     "stats/stats.d.ts": {
-      "commit": "fa7415af31cfa888ed621c0218ce728823158836"
+      "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
     },
     "dat-gui/dat-gui.d.ts": {
-      "commit": "fa7415af31cfa888ed621c0218ce728823158836"
+      "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
+    },
+    "webaudioapi/waa.d.ts": {
+      "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
     }
   }
 }
