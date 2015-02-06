@@ -8,7 +8,7 @@ module app {
         private stage:createjs.Stage;
         private canvas:HTMLCanvasElement;
 
-        private squares = [];
+        private squares: createjs.Bitmap[] = [];
         private container: createjs.Container;
         private settings: any;
         private isChanged = true;
@@ -50,8 +50,8 @@ module app {
 
         handleLogo = () => {
             this.logoBmp = new createjs.Bitmap(this.logo);
-            this.logoBmp.x = this.stage.canvas.width - this.logo.width;
-            this.logoBmp.y = this.stage.canvas.height - this.logo.height;
+            this.logoBmp.x = (<HTMLCanvasElement>this.stage.canvas).width - this.logo.width;
+            this.logoBmp.y = (<HTMLCanvasElement>this.stage.canvas).height - this.logo.height;
             this.stage.addChild(this.logoBmp);
             this.stage.update();
         };
@@ -71,7 +71,7 @@ module app {
             var source = new createjs.Bitmap(this.loader);
             var total = cols*rows;
             for(var i=0;i<total;i++) {
-                var square = new createjs.Bitmap(source.cacheCanvas);
+                var square = new createjs.Bitmap(<HTMLCanvasElement>source.cacheCanvas);
                 source.uncache();
                 var x = (width + padding) * (i%cols);
                 var y = (i/cols | 0) * (height+padding);
