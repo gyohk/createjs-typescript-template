@@ -17,22 +17,10 @@ module.exports = function (grunt) {
                 out: '<%= opt.outDir %>/js/Main.js'
             }
         },
-        tsd: {
-            refresh: {
+        dtsm: {
+            main: {
                 options: {
-                    // execute a command
-                    command: 'reinstall',
-                    
-                    //optional: always get from HEAD
-                    latest: true,
-                    
-                    // specify config file
-                    config: './conf/tsd.json',
-                    
-                    // experimental: options to pass to tsd.API
-                    opts: {
-                        // props from tsd.Options
-                    }
+                    config: "./conf/dtsm.json"
                 }
             }
         },
@@ -129,7 +117,7 @@ module.exports = function (grunt) {
         
     });
     
-    grunt.registerTask('setup', ['clean', 'tsd', 'copy', 'bower']);
+    grunt.registerTask('setup', ['clean', 'dtsm', 'copy', 'bower']);
     grunt.registerTask('default', ['ts', 'tslint']);
     grunt.registerTask('min', ['uglify', 'cssmin', 'imagemin']);
     
@@ -156,7 +144,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-ts');
-    grunt.loadNpmTasks('grunt-tsd');
+    grunt.loadNpmTasks('grunt-dtsm');
     grunt.loadNpmTasks('grunt-tslint');
     grunt.loadNpmTasks('grunt-typedoc');
     grunt.loadNpmTasks('grunt-bower-task');

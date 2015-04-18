@@ -1,5 +1,4 @@
-///<reference path="../typings/tsd.d.ts" />
-///<reference path="libs/bitmapdata-for-createjs.d.ts" />
+///<reference path="../typings/bundle.d.ts" />
 
 module app {
     "use strict";

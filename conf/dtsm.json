@@ -1,10 +1,13 @@
 {
-  "version": "v4",
-  "repo": "borisyankov/DefinitelyTyped",
-  "ref": "master",
+  "repos": [
+    {
+      "url": "https://github.com/borisyankov/DefinitelyTyped.git",
+      "ref": "master"
+    }
+  ],
   "path": "../typings",
-  "bundle": "typings/tsd.d.ts",
-  "installed": {
+  "bundle": "../typings/bundle.d.ts",
+  "dependencies": {
     "jquery/jquery.d.ts": {
       "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
     },
@@ -37,6 +40,10 @@
     },
     "webrtc/MediaStream.d.ts": {
       "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
+    },
+    "bitmapdata-for-createjs/bitmapdata-for-createjs.d.ts": {
+      "repo": "https://github.com/gyohk/TSDef_BitmapDataForCreateJS",
+      "ref": "a2d99cf6f0de4dfc7520fd9d7ef8b63d7ea8b00f"
     }
   }
 }
