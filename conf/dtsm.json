@@ -9,41 +9,49 @@
   "bundle": "../typings/bundle.d.ts",
   "dependencies": {
     "jquery/jquery.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
+      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe",
+      "ref": "557bb595af0ab301d098fb5bd50943fffbfcee57"
     },
     "createjs/createjs.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
+      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe",
+      "ref": "557bb595af0ab301d098fb5bd50943fffbfcee57"
     },
     "soundjs/soundjs.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
+      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe",
+      "ref": "557bb595af0ab301d098fb5bd50943fffbfcee57"
     },
     "createjs-lib/createjs-lib.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
+      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe",
+      "ref": "557bb595af0ab301d098fb5bd50943fffbfcee57"
     },
     "tweenjs/tweenjs.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
+      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe",
+      "ref": "557bb595af0ab301d098fb5bd50943fffbfcee57"
     },
     "easeljs/easeljs.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
+      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe",
+      "ref": "557bb595af0ab301d098fb5bd50943fffbfcee57"
     },
     "preloadjs/preloadjs.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
+      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe",
+      "ref": "557bb595af0ab301d098fb5bd50943fffbfcee57"
     },
     "stats/stats.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
+      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe",
+      "ref": "557bb595af0ab301d098fb5bd50943fffbfcee57"
     },
     "dat-gui/dat-gui.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
-    },
-    "webaudioapi/waa.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
-    },
-    "webrtc/MediaStream.d.ts": {
-      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe"
+      "commit": "42c8a3b74c05f6887ce21dd63c6234e424f9f8fe",
+      "ref": "557bb595af0ab301d098fb5bd50943fffbfcee57"
     },
     "bitmapdata-for-createjs/bitmapdata-for-createjs.d.ts": {
       "repo": "https://github.com/gyohk/TSDef_BitmapDataForCreateJS",
       "ref": "a2d99cf6f0de4dfc7520fd9d7ef8b63d7ea8b00f"
+    }
+  },
+  "link": {
+    "npm": {
+      "include": true
     }
   }
 }
